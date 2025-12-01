@@ -1,13 +1,17 @@
-import './App.css';
-import Chatbot from './Chatbot';
+import { Auth0Provider } from "@auth0/auth0-react";
+import Chatbot from "./Chatbot";
 
 function App() {
   return (
-    <div className="App">
-
-    <Chatbot/>
-
-    </div>
+    <Auth0Provider
+      domain={process.env.REACT_APP_AUTH0_DOMAIN}
+      clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
+      authorizationParams={{
+        redirect_uri: window.location.origin,
+      }}
+    >
+      <Chatbot />
+    </Auth0Provider>
   );
 }
 

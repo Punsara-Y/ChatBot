@@ -27,6 +27,70 @@ h2 {
   gap: 10px;
 }
 
+.code-container {
+  position: relative;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: #2d2d2d;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+  background: #444;
+}
+
+/* Multiline code block */
+.code-block {
+  background: #0d1117;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid #30363d;
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Inline code */
+.inline-code {
+  background: #30363d;
+  color: #e6edf3;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
 .user-msg,
 .bot-msg {
   padding: 12px 18px;
