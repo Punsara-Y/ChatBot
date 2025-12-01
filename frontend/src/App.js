@@ -8,7 +8,7 @@ function App() {
       clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
       authorizationParams={{
         redirect_uri: window.location.origin,
-        audience: "https://nova-backend"
+        audience: process.env.AUTH0_AUDIENCE
       }}
     >
       <Chatbot />
